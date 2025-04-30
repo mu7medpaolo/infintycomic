@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Infinity Comics</title>
+    <!-- Meta Tags -->
+    <meta name="description" content="Read the latest comics including Marvel, DC, and independent creators.">
+    <meta name="keywords" content="comics, Marvel, download comics, free comics, infinity comics">
+    <meta name="author" content="Infinity Comics">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/imags comics/favicon-16x16.png" type="image/png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/lang.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen-center">
+      <div class="terminal-loader">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
+    </div>
+    
+  </div>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/html/index.html" aria-label="Home">
+                    <img src="/imags comics/Marvel_Logo.svg.png" alt="Infinity Comics Logo">
+                </a>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="/html/index.html" class="active"><i class="fas fa-home"></i> <span data-translate="home">Home</span></a></li>
+                    <li><a href="/html/about.html"><i class="fas fa-info-circle"></i> <span data-translate="about">About</span></a></li>
+                    <li><a href="#featured"><i class="fas fa-star"></i> <span data-translate="featured">Featured</span></a></li>
+                    <li><a href="#classics"><i class="fas fa-book-open"></i> <span data-translate="classics">Classics</span></a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" data-translate-placeholder="searchPlaceholder" placeholder="Search comics..." aria-label="Search comics">
+                    <button id="searchButton" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i> <span data-translate="darkMode">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1 data-translate="welcome">Welcome to Infinity Comics</h1>
+            <p data-translate="discover">Discover the best collection of comics from Marvel!</p>
+            <a href="#featured" class="cta-button" data-translate="explore">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Comics -->
+        <section id="featured" class="comics-section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> <span data-translate="SERIES"></span>SERIES</h2>
+                <div class="section-controls">
+                    <button class="scroll-left" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-right" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="comics-container" id="featuredComicsContainer"></div>
+        </section>
+
+        <!-- New Releases -->
+        <section class="comics-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bolt"></i> <span data-translate="newReleases">New Releases</span></h2>
+                <div class="section-controls">
+                    <button class="scroll-left" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-right" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="comics-container" id="moreComicsContainer"></div>
+        </section>
+
+        <!-- Classic Comics -->
+        <section id="classics" class="comics-section">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> <span data-translate="classics">Classic Comics</span></h2>
+                <div class="section-controls">
+                    <button class="scroll-left" aria-label="Scroll left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-right" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="comics-container" id="classicsComicsContainer"></div>
+        </section>
+
+        <!-- Search Results (Hidden by default) -->
+        <section class="comics-section" id="searchResultsSection" style="display:none;">
+            <div class="section-header">
+                <h2><i class="fas fa-search"></i> <span data-translate="searchResults">Search Results</span></h2>
+            </div>
+            <div class="comics-container" id="searchResultsContainer"></div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h3 data-translate="subscribe">Subscribe to our Newsletter</h3>
+                <p data-translate="updates">Get updates on new comics and exclusive offers!</p>
+                <form id="newsletterForm">
+                    <input type="email" data-translate-placeholder="emailPlaceholder" placeholder="Your email address" required>
+                    <button type="submit" data-translate="subscribeButton">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/imags comics/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="80" height="30">
+                <p data-translate="slogan">Your ultimate destination for digital comics</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4 data-translate="quickLinks">Quick Links</h4>
+                <ul>
+                    <li><a href="/html/index.html" data-translate="home">Home</a></li>
+                    <li><a href="/html/about.html" data-translate="about">About</a></li>
+                    <li><a href="#featured" data-translate="featured">Featured</a></li>
+                    <li><a href="#classics" data-translate="classics">Classics</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4 data-translate="legal">Legal</h4>
+                <ul>
+                    <li><a href="#" data-translate="terms">Terms of Use</a></li>
+                    <li><a href="#" data-translate="privacy">Privacy Policy</a></li>
+                    <li><a href="#">DMCA</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4 data-translate="follow">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61573608733528" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p data-translate="copyright">© 2025 Infinity Comics. All rights reserved.</p>
+            <p class="disclaimer" data-translate="disclaimer">All images and content are property of their respective owners. This site is for educational purposes only.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="/Script/scripts.js"></script>
+    <script src="/Script/lang.js"></script>
+</body>
+</html>

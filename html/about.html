@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Infinity Comics</title>
+    <meta name="description" content="Learn more about Infinity Comics - your ultimate destination for digital comics from Marvel, DC and more">
+    <meta name="keywords" content="about comics, infinity comics, marvel comics, dc comics">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/imags comics/favicon-16x16.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styleabout.css">
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen-center">
+      <div class="terminal-loader">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Home">
+                    <img src="/imags comics/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="120" height="45">
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> <span>HOME</span></a></li>
+                    <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> <span>ABOUT</span></a></li>
+                    <li><a href="index.html#featured"><i class="fas fa-star"></i> <span>FEATURED</span></a></li>
+                    <li><a href="index.html#classics"><i class="fas fa-book-open"></i> <span>CLASSICS</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search comics..." aria-label="Search comics">
+                    <button id="searchButton" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i> <span class="mode-text">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>About Infinity Comics</h1>
+            <p>Your ultimate destination for digital comics</p>
+            <a href="#main-content" class="scroll-down-btn">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="about-main" id="main-content">
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>
+                    Welcome to Infinity Comics! We're your ultimate destination for reading and exploring the world of comics online. Whether you're into Marvel heroes or independent creators, you'll find something exciting here.
+                </p>
+                <p>
+                    Our platform is dedicated to bringing you high-quality comics, classic series, and the latest releases, all in one place. We aim to create a community where comic fans from around the world can come together, explore new stories, and revisit old favorites.
+                </p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="27">0</span>
+                        <span class="stat-label">Comics Available</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Daily Readers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">New Comics Weekly</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2>Why Choose Infinity Comics?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Latest Releases</h3>
+                        <p>Access to the newest comics from major publishers like Marvel</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Design</h3>
+                        <p>Works perfectly on all devices from desktop to mobile</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-download"></i>
+                        <h3>Free Downloads</h3>
+                        <p>High-quality comics available for free download</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Vast Library</h3>
+                        <p>Constantly updated with new titles and old classics</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Driven</h3>
+                        <p>Recommendations and favorites from fellow fans</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Dark Mode</h3>
+                        <p>Comfortable reading experience day or night</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team -->
+        <section class="our-team">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo" style="background-image: url('/imags comics/ava.jpg');"></div>
+                        <h3>Mohamed Hassan</h3>
+                        <p>Front-End Developer</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Vision -->
+        <section class="our-vision">
+            <div class="container">
+                <h2>Our Vision</h2>
+                <p>
+                    Infinity Comics was created by fans, for fans. Our mission is to make comic books more accessible to everyone, everywhere. We believe in the power of storytelling and the magic of illustrations, and we're here to deliver that experience straight to your screen.
+                </p>
+                <div class="vision-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">How do I download comics? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Simply browse our library, select the comic you want, and click the download button. You'll need to be logged in to download comics.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Is there a mobile app? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Currently we don't have a mobile app, but our website is fully responsive and works great on mobile devices!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Are the comics really free? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes! All comics on our platform are completely free to read and download.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How often do you add new comics? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>We add new comics every week, usually on Wednesdays which is when new comics are traditionally released.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h3>Join Our Community</h3>
+                <p>Subscribe to get updates on new comics and exclusive offers!</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="newsletter-success" id="newsletterSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Thank you for subscribing!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="imags comics/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="80" height="30">
+                <p>Your ultimate destination for digital comics</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#classics">Classics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">DMCA</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61573608733528" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Infinity Comics. All rights reserved.</p>
+            <p class="disclaimer">All images and content are property of their respective owners. This site is for educational purposes only.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="/Script/aboutpage.js"></script>
+</body>
+</html>
