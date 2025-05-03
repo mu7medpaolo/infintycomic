@@ -8,7 +8,7 @@
     <meta name="keywords" content="about comics, infinity comics, marvel comics, dc comics">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/imags-comics/favicon-16x16.png">
+    <link rel="icon" type="img/png" href="img/favicon-16x16.png">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,7 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
+    
     <link rel="stylesheet" href="styleabout.css">
+    <link rel="stylesheet" href="css/animations.css">
     
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -38,16 +40,16 @@
             <div class="control maximize"></div>
           </div>
         </div>
-        <div class="text">Loading Universe...</div>
+        <div class="text">Loading...</div>
       </div>
     </div>
     
     <!-- Header -->
-    <header>
+    <header class="sticky-header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html" aria-label="Home">
-                    <img src="/imags-comics/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="120" height="45" loading="lazy">
+                    <img src="img/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="150" height="50" loading="lazy">
                 </a>
             </div>
             
@@ -61,6 +63,7 @@
                     <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> <span>ABOUT</span></a></li>
                     <li><a href="index.html#featured"><i class="fas fa-star"></i> <span>FEATURED</span></a></li>
                     <li><a href="index.html#classics"><i class="fas fa-book-open"></i> <span>CLASSICS</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> <span>CONTACT</span></a></li>
                 </ul>
             </nav>
             
@@ -81,10 +84,11 @@
 
     <!-- Hero Banner -->
     <section class="about-hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>About Infinity Comics</h1>
             <p>Your ultimate destination for digital comics</p>
-            <a href="#main-content" class="scroll-down-btn" aria-label="Scroll down">
+            <a href="#main-content" class="scroll-down-btn pulse" aria-label="Scroll down">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
@@ -97,17 +101,22 @@
             <div class="container">
                 <h2>Our Story</h2>
                 <div class="about-content">
-                    <p>
-                        Welcome to Infinity Comics! We're your ultimate destination for reading and exploring the world of comics online. Whether you're into Marvel heroes or independent creators, you'll find something exciting here.
-                    </p>
-                    <p>
-                        Our platform is dedicated to bringing you high-quality comics, classic series, and the latest releases, all in one place. We aim to create a community where comic fans from around the world can come together, explore new stories, and revisit old favorites.
-                    </p>
+                    <div class="about-text">
+                        <p>
+                            Welcome to Infinity Comics! We're your ultimate destination for reading and exploring the world of comics online. Whether you're into Marvel heroes, DC legends or independent creators, you'll find something exciting here.
+                        </p>
+                        <p>
+                            Our platform is dedicated to bringing you high-quality comics, classic series, and the latest releases, all in one place. We aim to create a community where comic fans from around the world can come together, explore new stories, and revisit old favorites.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                
+                    </div>
                 </div>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="stat-circle">
-                            <span class="stat-number" data-count="!">0</span>K+
+                            <span class="stat-number" data-count="!">0</span>+
                         </div>
                         <span class="stat-label">Comics Available</span>
                     </div>
@@ -119,7 +128,7 @@
                     </div>
                     <div class="stat-item">
                         <div class="stat-circle">
-                            <span class="stat-number" data-count="10">0</span>+
+                            <span class="stat-number" data-count="20">0</span>+
                         </div>
                         <span class="stat-label">New Comics Weekly</span>
                     </div>
@@ -185,7 +194,7 @@
                 <p class="team-description">Passionate comic fans dedicated to bringing you the best digital experience</p>
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="member-photo" style="background-image: url('/imags-comics/ava.jpg');"></div>
+                        <div class="member-photo" style="background-image: url('img/ava.jpg');"></div>
                         <h3>Mohamed Hassan</h3>
                         <p>Front-End Developer</p>
                         <div class="social-links">
@@ -193,12 +202,14 @@
                         </div>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo" style="background-color: #e62429;"></div>
+                        <div class="member-photo" style="background-image: url('images/team/ahmed.jpg');"></div>
                         <h3>Ahmed Mohamed</h3>
                         <p>Arabic Translator</p>
                         <div class="social-links">
-                          
+
                         </div>
+                    </div>
+                  
                     </div>
                 </div>
             </div>
@@ -215,13 +226,9 @@
                     <p>
                         We're committed to preserving the legacy of comic book art while embracing new technologies to enhance your reading experience. Our goal is to build the most comprehensive digital comics library while supporting artists and publishers.
                     </p>
+              
                 </div>
-                <div class="vision-image">
-                    <div class="comic-strip">
-                        <div class="panel"></div>
-                        <div class="panel"></div>
-                        <div class="panel"></div>
-                    </div>
+        
                 </div>
             </div>
         </section>
@@ -286,7 +293,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="/imags-comics/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="80" height="30" loading="lazy">
+                <img src="img/Marvel_Logo.svg.png" alt="Infinity Comics Logo" width="120" height="40" loading="lazy">
                 <p>Your ultimate destination for digital comics</p>
                 <div class="app-download">
                     <p>Coming soon to mobile:</p>
@@ -313,6 +320,7 @@
                 </ul>
             </div>
             
+        
             
             <div class="footer-links">
                 <h4>Legal</h4>
@@ -336,8 +344,8 @@
                     <a href="#" aria-label="Reddit"><i class="fab fa-reddit-alien"></i></a>
                 </div>
                 <div class="footer-contact">
-                    <p><i class="fas fa-envelope"></i> contact@infinitycomics.com</p>
-                    <p><i class="fas fa-phone"></i> </p>
+                    <p><i class="fas fa-envelope"></i> infinitycomicss@gmail.com</p>
+                  
                 </div>
             </div>
         </div>
